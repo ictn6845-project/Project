@@ -1,0 +1,140 @@
+:root {
+    --primary-clr: black;
+}
+
+nav {
+    background: var(--primary-clr);
+    padding: 1px 10px;
+}
+
+.header {
+    color: black;
+    padding: 5px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.menu {
+    background-color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.home a:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+    background-color: white;
+}
+
+.links a:hover {
+    text-decoration: none;
+    background-color: white;
+}
+
+.menu li {
+    font-size: 16px;
+    padding: 10px 5px;
+    white-space: nowrap;
+    background-color: black;
+}
+
+.menu li a {
+    display: block;
+    background-color: black;
+}
+
+.home a,
+hamburger a {
+    font-size: 25px;
+}
+
+/* Menu CSS for Mobile */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align-last: center;
+}
+
+.hamburger {
+    order: 1;
+}
+
+.links {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.links.active {
+    display: block;
+}
+
+/* Navigation bar Hamburger button */
+/* Only shows when display is showing in Mobile mode */
+
+.hamburger {
+    cursor: pointer;
+}
+
+.bars {
+    background: grey;
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    width: 10px;
+}
+
+.bars::before,
+.bars::after {
+    background: grey;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+}
+
+.bars::before {
+    top: 10px;
+}
+
+.bars::after {
+    top: -10px;
+}
+
+
+/* Menu CSS for Desktops */
+@media all and (min-width: 768px) {
+    .links {
+        display: block;
+        flex-wrap: nowrap;
+        width: auto;
+        order: 1;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .home {
+        order: 0;
+    }
+    
+    .menu li {
+        padding: 5px 2px;
+    }
+}
